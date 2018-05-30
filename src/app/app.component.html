@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <div><h2 class="text-center">Linear regression with Angular 5</h2></div>
+    <div class="col-xs-12 col-sm-6 margin-top">
+      <table class="table table-bordered margin-top">
+        <thead>
+          <tr>
+            <th>X</th>
+            <th>Y</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let dataSet of xyDatasets">
+            <td>{{dataSet[0]}}</td>
+            <td>{{dataSet[1]}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-xs-12 col-sm-3 margin-top">
+
+      <label><h4>Set a new x value</h4></label>
+      <input class="form-control col-xs-2" type="number" name="" 
+             (keyup)="linearRegression($event.target.value)" autofocus>
+      <p>Predicted y value <strong>{{ predictedY }}</strong></p>
+      <button class="btn btn-primary add-table" (click)="addToTable()" disabled="true">Add to table</button>
+
+    </div>
+  </div>
+</div>
