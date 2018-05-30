@@ -11,7 +11,6 @@ export class AppComponent {
 
   // xy_dataset format: array of [x, y] arrays
   xyDatasets = [[3, 20], [3, 25], [2, 20], [4, 30], [1, 10]];
-  //itemsLen: number;
   newXval: number;
 
   linearRegression(newX) {
